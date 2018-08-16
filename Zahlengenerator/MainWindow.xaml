@@ -1,0 +1,45 @@
+﻿<Window x:Class="Zahlengenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zahlengenerator"
+        mc:Ignorable="d"
+        Title="Numbgen
+        " Height="530.556" Width="669.733">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Gnr" Content="Generieren" HorizontalAlignment="Left" Margin="201,419,0,0" VerticalAlignment="Top" Width="250" Height="45" IsCancel="True" FontSize="24" Background="{DynamicResource {x:Static SystemColors.ControlBrushKey}}" Click="Gnr_Click" FontFamily="Bookman Old Style"/>
+        <TextBox x:Name="Eing1" HorizontalAlignment="Left" Height="36" Margin="201,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.363,0.759" FontSize="18"/>
+        <TextBox x:Name="Eing2" HorizontalAlignment="Left" Height="36" Margin="405,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="46" FontSize="18"/>
+        <Label Content="aus" HorizontalAlignment="Left" Margin="300,99,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.772,-0.923" Height="36" Width="50" FontSize="20" FontFamily="Bookman Old Style"/>
+        <Label Content="   Zahlengenerator" HorizontalAlignment="Left" Margin="201,28,0,0" VerticalAlignment="Top" FontSize="24" Height="42" Width="250" FontFamily="Bookman Old Style"/>
+        <Button x:Name="e6x49" Content="Lotto 6 aus 49" HorizontalAlignment="Left" Margin="36,419,0,0" VerticalAlignment="Top" Width="141" Height="45" Click="e6x49_Click" FontFamily="Bookman Old Style" FontSize="18" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" Foreground="#FF192AD3"/>
+        <Button x:Name="e5x50" Content="Lotto 5 aus 50" HorizontalAlignment="Left" Margin="478,419,0,0" VerticalAlignment="Top" Width="141" Height="45" Click="e5x50_Click" FontFamily="Bookman Old Style" FontSize="18" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}" Foreground="#FF192AD3" IsDefault="True"/>
+        <TextBox x:Name="Erg" Height="227" Margin="36,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="583" HorizontalAlignment="Left" ScrollViewer.VerticalScrollBarVisibility="Auto" RenderTransformOrigin="0.5,0.5" FontFamily="Bookman Old Style" AcceptsReturn="True" FontSize="18" CaretBrush="{DynamicResource {x:Static SystemColors.ActiveCaptionTextBrushKey}}" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Cursor="Hand">
+            <TextBox.Foreground>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuTextColorKey}}"/>
+            </TextBox.Foreground>
+            <TextBox.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Image HorizontalAlignment="Left" Height="59" Margin="450,28,0,0" VerticalAlignment="Top" Width="169" Source="image/kn.png
+               " IsEnabled="False"/>
+
+    </Grid>
+    <Window.Background>
+        <ImageBrush ImageSource="image/gr.jpg" />
+    </Window.Background>
+</Window>
