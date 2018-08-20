@@ -73,7 +73,7 @@ namespace Zahlengenerator
             
             StringBuilder sb = new StringBuilder();
 
-            int processed = 0;
+            
 
             if (lg == 5 && kg == 50)
             {
