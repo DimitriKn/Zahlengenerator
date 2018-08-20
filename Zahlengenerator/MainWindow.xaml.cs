@@ -73,16 +73,23 @@ namespace Zahlengenerator
             
             StringBuilder sb = new StringBuilder();
 
+            int processed = 0;
+
             if (lg == 5 && kg == 50)
             {
-                string[] numbs = new string[lg];
+                string[] numbs = new string[lg*2];
 
-                for (int ctr = 0; ctr < lg; ctr++)
+                for (int ctr = 0; ctr < lg*2; ctr++)
                 {
                     numbs[ctr] = rnd.Next(1, kg).ToString();
                 }
 
-                foreach (var num in numbs.OrderBy(x => int.Parse(x)))
+                // identische Zahlen entfernen
+
+                numbs = numbs.Distinct().ToArray();
+
+                
+                foreach (var num in numbs.OrderBy(x => int.Parse(x)).Take(lg))
                 {
                     sb.Append(num).Append(" ");
                 }
@@ -90,16 +97,20 @@ namespace Zahlengenerator
                 sb.Append("   ");
 
 
-                string[] numbs2 = new string[2];
+                string[] numbs2 = new string[4];
 
-                for (int tr = 0; tr < 2; tr++)
+               
+
+                for (int tr = 0; tr < 4; tr++)
                 {
                     numbs2[tr] = rnd.Next(1, 10).ToString();
                 }
 
-                foreach (var num in numbs2.OrderBy(x => int.Parse(x))) // zahlen anordnen
+                numbs2 = numbs2.Distinct().ToArray();
+
+                foreach (var num in numbs2.OrderBy(x => int.Parse(x)).Take(2)) // zahlen anordnen
                 {
-                    sb.Append(num).Append(" ");
+                    sb.Append(num).Append(" ");    
                 }
 
                 string res = sb.ToString();
@@ -108,17 +119,27 @@ namespace Zahlengenerator
             }
             else
             {
-// string array initialesieren
-                string[] numbs = new string[lg];
-               // befüllen
-                for (int ctr = 0; ctr < lg; ctr++)
+            // string array initialisieren
+
+                string[] numbs = new string[lg*2];
+              
+                // befüllen
+
+                for (int ctr = 0; ctr < lg*2; ctr++)
                 {
                     numbs[ctr] = rnd.Next(1, kg).ToString();  
                 }
-               //ausgeben 
-                foreach (var num in numbs.OrderBy(x => int.Parse(x)))
+
+                // identische Zahlen entfernen
+
+                numbs = numbs.Distinct().ToArray();
+
+                //ausgeben 
+               
+                foreach (var num in numbs.OrderBy(x => int.Parse(x)).Take(lg))
                 {
                     sb.Append(num).Append(" ");
+                   
                 }
 
                 string res = sb.ToString();
