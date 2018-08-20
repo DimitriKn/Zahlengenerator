@@ -23,7 +23,7 @@ namespace Zahlengenerator
         public MainWindow()
         {
             InitializeComponent();
-            Erg.Text = "Willkomen! Das ist ein Zufallszahlengenerator. Geben Sie die Zahlen von 1 bis 1000";
+            Erg.Text = "Willkommen! Das ist ein Zufallszahlengenerator. Geben Sie die Zahlen von 1 bis 1000";
             Erg.Foreground = Brushes.ForestGreen;
             Erg.FontSize = 16;
         }
@@ -47,7 +47,7 @@ namespace Zahlengenerator
 
                 if (lg == 0 || kg > 1000)
                 {
-                    Erg.Text = "Es sind die Zahlen nur von 1 bis 1000 erlaubt";
+                    Erg.Text = "Es sind nur die Zahlen von 1 bis 1000 erlaubt";
                     Erg.Foreground = Brushes.Red;
                     Erg.FontSize = 16;
 
